@@ -1,0 +1,129 @@
+.contact {
+  background: #f5f5f5;
+  padding: 5rem 10rem 7rem;
+  @include responsive(phone) {
+    padding: 1rem;
+  }
+
+  &__heading {
+    margin-left: -1rem;
+  }
+
+  &__info {
+    &--heading {
+      margin-left: 6.5rem;
+      color: #a6a6a6;
+      @include responsive(phone) {
+        margin-top: 2rem;
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+
+    &--item {
+      display: flex;
+      align-items: center;
+      margin: 3.7rem 0 0 3rem;
+      &:nth-child(3) {
+        .icon {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+    .icon,
+    &--sociel-icons a {
+      color: $secondry_color;
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+    &--sociel-icons {
+      position: absolute;
+      bottom: 0.5rem;
+      margin-left: 7rem;
+
+      @include responsive(phone) {
+        position: relative;
+        margin: 3rem auto 1rem;
+      }
+
+      a:hover {
+        color: #614979;
+      }
+    }
+  }
+
+  &__form {
+    &-form {
+      .form-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include responsive(phone) {
+          flex-direction: column;
+        }
+        label {
+          color: #a5a2a2;
+          font-size: 1.4rem;
+          margin-left: -1rem;
+          padding-top: 5px;
+        }
+
+        input,
+        textarea {
+          border: 1px solid #c2c2c2;
+          color: #a5a2a2;
+          border-radius: 3px;
+          box-shadow: #afaeae 0.5px 0.2px 0px 1px;
+          height: 3rem;
+          width: 70%;
+          margin-bottom: 0.7rem;
+          padding: 10px 15px;
+          font-size: 1rem;
+          font-family: sans-serif;
+          @include responsive(phone) {
+            width: 100%;
+          }
+
+          &:active,
+          &:focus {
+            outline: none;
+          }
+        }
+        textarea {
+          height: 8rem;
+          line-height: 1.3rem;
+          resize: none;
+          &::-webkit-scrollbar {
+            width: 0.5em;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            border-radius: 5rem;
+          }
+        }
+      }
+
+      &--submit-btn {
+        background: none;
+        color: $primary_color;
+        border: 2px solid $secondry_color;
+        border-radius: 6px;
+        width: 70%;
+        float: right;
+        padding: 0.6rem 0;
+        font-size: 1.3rem;
+        @include responsive(phone) {
+          width: 100%;
+        }
+        &:focus,
+        &:active,
+        &:hover {
+          outline: none;
+          background-color: #614979;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

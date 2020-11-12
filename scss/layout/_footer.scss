@@ -1,0 +1,85 @@
+.footer {
+  width: 100%;
+  padding: 3rem;
+  padding-bottom: 1.5rem;
+  padding-top: 4rem;
+  background-color: $primary_color;
+
+  @include responsive(phone) {
+    text-align: center;
+    padding-top: 2rem;
+    padding: 1rem;
+  }
+
+  &__identity {
+    width: 100%;
+    margin-top: 20%;
+    @include responsive(small_screen) {
+      margin-left: 30%;
+      margin-top: -10%;
+      width: 50%;
+    }
+    @include responsive(phone) {
+      margin-left: 0;
+      margin: auto;
+      width: 100%;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+  &__sociel-icons {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(phone) {
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+    }
+
+    .sociel-link {
+      color: #ccc;
+      font-size: 1.2rem;
+      padding: 0.7rem;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &__menu {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    h4 {
+      color: #eee;
+      font-size: 1rem;
+      @include responsive(phone) {
+        font-size: 2rem;
+      }
+    }
+    li {
+      padding: 3px 0;
+    }
+
+    a {
+      color: #ccc;
+      font-size: 0.95rem;
+      @include responsive(phone) {
+        font-size: 1.7rem;
+      }
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  &__copy-right {
+    padding-top: 2rem;
+    text-align: center;
+    color: $secondry_color;
+    font-size: 1.2rem;
+  }
+}
