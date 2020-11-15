@@ -1,0 +1,17 @@
+{
+  "name": "engyenergy",
+  "version": "1.0.0",
+  "description": "engy energy is new project for a client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "node-sass scss/main.scss styles/scss-styles.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.3",
+    "node-sass": "^5.0.0"
+  }
+}

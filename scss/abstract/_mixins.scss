@@ -1,0 +1,39 @@
+// 600px to em == 600/16 = 37.5em phone
+// 900px to em == 900/16 = 56.25em tab_port
+// 1200px to em == 1200/16 = 75em tab_land
+// 1320px to em == 1320/16 = 82.5em small_screen
+// 1800px to em == 1800/16 = 112.5em big_screen
+
+$color: #fff;
+
+@mixin responsive($device) {
+  @if $device == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $device == tab_port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $device == tab_land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $device == small_screen {
+    @media (max-width: 82.5em) {
+      @content;
+    }
+  }
+  @if $device == big_screen {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $device) {
+      @content;
+    }
+  }
+}
