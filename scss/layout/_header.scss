@@ -1,7 +1,22 @@
 .header {
+  .row {
+    padding: 0 3rem;
+  }
+
   &__logo {
+    padding: 2rem;
     img {
       width: 8rem;
+    }
+  }
+  &__booking {
+  }
+  &__menu {
+    margin: auto;
+    margin-right: 0;
+    &--btn {
+      color: $secondry_color;
+      font-size: 2rem;
     }
   }
 }
